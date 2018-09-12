@@ -31,7 +31,7 @@ and point your web browser to http://localhost:${PORT}.
 module load anvio/5.1
 
 # run anvio interactive
-anvi-interactive -P ${PORT} -c example.db -p example/PROFILE.db
+runanvi anvi-interactive -P ${PORT} -c example.db -p example/PROFILE.db
 ```
 ***Please note that the ```-P``` flag is required to assure a unique port. The other file names may vary.
 
