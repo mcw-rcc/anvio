@@ -12,6 +12,8 @@ Example job script:
 #PBS -l walltime=1:00:00
 #PBS -j oe
 
+cd $PBS_O_WORKDIR
+
 # tunnel info
 PORT=$(shuf -i8000-9999 -n1)
 SUBMIT_HOST=$(echo ${PBS_O_HOST%%.*}.rcc.mcw.edu)
@@ -31,6 +33,7 @@ module load anvio/5.1
 # run anvio interactive
 anvi-interactive -P ${PORT} -c example.db -p example/PROFILE.db
 ```
+**The -P flag is required to assure a unique port. The other file names will vary.
 
 ## Start the job
 1. Copy contents of anvio.pbs (example above) to a file in your home directory.
