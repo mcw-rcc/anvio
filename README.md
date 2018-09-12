@@ -33,7 +33,7 @@ module load anvio/5.1
 # run anvio interactive
 anvi-interactive -P ${PORT} -c example.db -p example/PROFILE.db
 ```
-***Please note that the ```-P``` flag is required to assure a unique port. The other file names will vary.
+***Please note that the ```-P``` flag is required to assure a unique port. The other file names may vary.
 
 ## Start the job
 1. Copy contents of anvio.pbs (example above) to a file in your home directory.
