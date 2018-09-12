@@ -31,9 +31,9 @@ and point your web browser to http://localhost:${PORT}.
 module load anvio/5.1
 
 # run anvio interactive
-runanvi anvi-interactive -P ${PORT} -c example.db -p example/PROFILE.db
+runanvio anvi-interactive -P ${PORT} -c example.db -p example/PROFILE.db
 ```
-***Please note that the ```-P``` flag is required to assure a unique port. Also, ```runanvi``` is required before any Anvi'o commands.
+***Please note that the ```-P``` flag is required to assure a unique port. Also, ```runanvio``` is required before any Anvi'o commands.
 
 ## Start the job
 1. Copy contents of anvio.pbs (example above) to a file in your home directory.
