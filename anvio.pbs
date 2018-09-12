@@ -1,0 +1,27 @@
+#!/bin/bash
+#PBS -N anvio
+#PBS -l nodes=1:ppn=1
+#PBS -l mem=5gb
+#PBS -l walltime=1:00:00
+#PBS -j oe
+
+cd $PBS_O_WORKDIR
+
+# tunnel info
+PORT=$(shuf -i8000-9999 -n1)
+SUBMIT_HOST=$(echo ${PBS_O_HOST%%.*}.rcc.mcw.edu)
+
+# print tunneling instructions
+echo -e "
+SSH tunnel from your workstation using the following command:
+
+ssh -L ${PORT}:${HOSTNAME}:${PORT} ${USER}@${SUBMIT_HOST}
+
+and point your web browser to http://localhost:${PORT}.
+"
+
+# load modules
+module load anvio/5.1
+
+# run anvio interactive
+anvi-interactive -P ${PORT} -c example.db -p example/PROFILE.db
