@@ -3,7 +3,7 @@
 
 Singularity container running Anvi'o.
 
-#Batch Job Script
+# Batch Job Script
 ```
 #!/bin/bash
 #PBS -N anvio_test
@@ -20,7 +20,7 @@ runanvio anvi-run-ncbi-cogs --num-threads $PBS_NUM_PPN
 ```
 ***Please note that ```runanvio``` is required before any Anvi'o commands.
 
-#Interactive Job Script
+# Interactive Job Script
 ```
 #!/bin/bash
 #PBS -N anvio
