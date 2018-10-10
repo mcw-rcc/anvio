@@ -3,7 +3,23 @@
 
 Singularity container running Anvi'o.
 
-Example job script:
+#Batch Job Script
+```
+#!/bin/bash
+#PBS -N anvio_test
+#PBS -S /bin/bash
+#PBS -l nodes=1:ppn=1
+#PBS -l mem=5gb
+#PBS -l walltime=8:00:00
+#PBS -j oe
+
+module load anvio/5.1                    
+
+cd $PBS_O_WORKDIR
+runanvio anvi-run-ncbi-cogs --num-threads $PBS_NUM_PPN
+```
+***Please note that ```runanvio``` is required before any Anvi'o commands.
+#Interactive Job Script
 ```
 #!/bin/bash
 #PBS -N anvio
