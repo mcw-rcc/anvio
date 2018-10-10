@@ -19,6 +19,7 @@ cd $PBS_O_WORKDIR
 runanvio anvi-run-ncbi-cogs --num-threads $PBS_NUM_PPN
 ```
 ***Please note that ```runanvio``` is required before any Anvi'o commands.
+
 #Interactive Job Script
 ```
 #!/bin/bash
