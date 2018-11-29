@@ -1,0 +1,18 @@
+Bootstrap: docker
+From: meren/anvio:5.2
+
+%labels
+Maintainer Matthew Flister
+Version 11.29.18
+
+%help
+This container runs anvi'o 5.2.
+
+%environment
+    SHELL=/bin/bash
+
+%post
+    # default mount points
+    mkdir -p /scratch/global /scratch/local /rcc/stor1/refdata /rcc/stor1/projects /rcc/stor1/depts
+
+    anvi-setup-ncbi-cogs
